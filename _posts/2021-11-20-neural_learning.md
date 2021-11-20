@@ -13,7 +13,9 @@ use_math: true
 **What is learning?**
 
 -	Learning is to get optimal parameters from train data
--	Our aim is to **minimize Loss Function** which shows whether training process is successfully working
+-	Our aim is to **minimize Loss Function** which shows whether training process is successfully working<br>
+
+<br>
 
 **Machine Learning**
 
