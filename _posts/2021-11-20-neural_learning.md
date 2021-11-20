@@ -60,8 +60,6 @@ Let's say we aim to classify **mnist** data. There are 3 ways of finding pattern
 
 $$ E = \frac12\sum_{k}(y_k-t_k)^2 $$
 
-<br>
-
 -	**$y_k$**: output value that our model(neural network, NN) estimates
 -	**$t_k$**: true value that show which **class** it belongs to.
 -	$k$: dimension of output data **(number of classes in classification problem)**
@@ -107,13 +105,11 @@ print(sum_squares_error(np.array(y2),np.array(t)))
 
 $$ E = -\sum_kt_klogy_k $$
 
-<br>
-
 -	Here, **$log$** Means **$ln(=log_e)$**
 
 -	This formula returns value only when $y_k$ belongs to class that $t_k$ shows
 
-	-	let's say $y_k = \begin{bmatrix} 0.2\\0.3\\0.5 \end{bmatrix} $ and $ t_k = \begin{bmatrix} 0\\0\\1 \end{bmatrix}$
+	-	let's say $y_k = [0.2, 0.3, 0.5] $ and $ t_k = [0, 0, 1]$
 	-	The out put is $-log0.5$
 
 <br>
@@ -145,17 +141,13 @@ print(cross_entropy_error(np.array(y2), np.array(t)))
 
 #### 4.2.3 mini-batch learning
 
-<br>
-
 **Mini-batch learning** is process of choosing **batch-size** data and use it for learning.
 
-Ex) if **batch-size** is 100, we select 100 data from 60,000 datasets of **MNIST**
+**Ex)** If **batch-size** is 100, we select 100 data from 60,000 datasets of **MNIST**
 
 <br>
 
 $$ E = -\frac{1}{N}\sum_n\sum_kt_klogy_k $$
-
-<br>
 
 By dividing $E$ with $N$, we get **Mean Loss Function**
 
@@ -256,8 +248,6 @@ $$\frac{True Positive}{True Positive + False Positive}$$
 
 ### 4.3 Numerical Differentiation
 
-<br>
-
 **Numerical Differentiation** means that to differentiate with very small difference($h$)
 
 <br>
@@ -267,8 +257,6 @@ $$\frac{True Positive}{True Positive + False Positive}$$
 <br>
 
 $$ \frac{df(x)}{dx} = \lim_{h \to 0}\frac{f(x+h)-f(x)}{h} $$
-
-<br>
 
 Differentiation is process of finding **derivative**, or rate of change, of a function
 
@@ -323,8 +311,6 @@ numerical_diff(function_tmp1, 3.0)
 
 ### 4.4 Gradient
 
-<br>
-
 **Gradient** is vector of all the partial derivative
 
 $$ ( \frac{\partial{f}}{\partial{x_0}}, \frac{\partial{f}}{\partial{x_1}} )$$
@@ -375,13 +361,9 @@ The way that arrow points is the place where decreases output value
 
 #### 4.4.1 Gradient Descent
 
-<br>
-
 **Gradient Descent Formula**
 
 $$ x_k = x_k - \eta\frac{\partial{f}}{\partial{x_k}} $$
-
-<br>
 
 -	eta($\eta$) is **learning rate**
 -	eta is hyperparameter that we have to choose before learning
@@ -440,8 +422,6 @@ Although **Gradient Descent** is the method that we mostly use in NN, this metho
 <br>
 
 ![gd](/assets/images/21-11-20_neural_learning/gd.png)
-
-<br>
 
 -	Depend on where does initial point start, it might not find **Global Minimum** and fall into **Local Minimum**
 -	If $x_k$ fall into **plateau**, $x_k$ will not change anymore.
@@ -520,13 +500,15 @@ array([[ 0.4121426 ,  0.15822056, -0.57036316],
 
 ### 4.5 Learning Algorithm
 
-<br>
-
 Let's put all together that we learned before
 
 **[Process of Neural Network]**
 
-**1. Get Data**: Batch, Mini-Batch, Online-Learning etc.**2. Find Gradient**: Find Gradient that leads to minimize loss functions**3. Renew Parameter**
+**1. Get Data**: Batch, Mini-Batch, Online-Learning etc.
+
+**2. Find Gradient**: Find Gradient that leads to minimize loss functions
+
+**3. Renew Parameter**
 
 <br>
 
@@ -581,8 +563,6 @@ class TwoLayerNet:
 
         return grads
 ```
-
-<br>
 
 Sometimes, what value we use for initializing parameter determines the success of learning
 
