@@ -2,7 +2,7 @@
 
 layout: single
 
-title: "밑바닥부터 시작하는 딥러닝1 - Ch2. 퍼셉트론"
+title: "DeepLearning from Scratch - Ch2. Perceptron"
 
 description: "퍼셉트론의 기본 개념과 하나의 퍼셉트론으로 XOR 게이트를 풀 수 없는 이유에 대해 설명합니다"
 
