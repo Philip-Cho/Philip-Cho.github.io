@@ -15,8 +15,6 @@ use_math: true
 -	Learning is to get optimal parameters from train data
 -	Our aim is to **minimize Loss Function** which shows whether training process is successfully working
 
-<br>
-
 **Machine Learning**
 
 -	Data is important element in Machine Learning
@@ -421,7 +419,7 @@ Although **Gradient Descent** is the method that we mostly use in NN, this metho
 
 <br>
 
-![gd](/assets/images/21-11-20_neural_learning/gd.png)
+![gd](/assets/images/21-11-20_neural_learning/gd.jpg)
 
 -	Depend on where does initial point start, it might not find **Global Minimum** and fall into **Local Minimum**
 -	If $x_k$ fall into **plateau**, $x_k$ will not change anymore.
